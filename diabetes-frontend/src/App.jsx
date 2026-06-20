@@ -18,9 +18,13 @@ function App() {
   const [result, setResult] = useState(null);
 
   const [history, setHistory] = useState(() => {
+  try {
     const saved = localStorage.getItem("predictionHistory");
     return saved ? JSON.parse(saved) : [];
-  });
+  } catch {
+    return [];
+  }
+});
 
   const labels = {
     Pregnancies: "Pregnancies",

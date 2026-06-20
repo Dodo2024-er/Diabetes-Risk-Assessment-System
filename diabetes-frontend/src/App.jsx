@@ -109,8 +109,16 @@ localStorage.setItem(
 ```
 
 } catch (error) {
-console.error(error);
-alert("❌ Prediction Failed");
+  console.error("FULL ERROR:", error);
+
+  if (error.response) {
+    console.log(error.response.data);
+  }
+
+  alert(
+    "Prediction Failed: " +
+    (error.response?.data?.error || error.message)
+  );
 }
 };
 

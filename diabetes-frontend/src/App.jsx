@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import axios from "axios";
 import jsPDF from "jspdf";
@@ -93,24 +92,9 @@ const response = await axios.post(
 formData
 );
 
-```
+
 setResult(response.data);
 
-const newPrediction = {
-  date: new Date().toLocaleString(),
-  prediction: response.data.prediction,
-  confidence: response.data.confidence,
-};
-
-const updatedHistory = [newPrediction, ...history];
-
-setHistory(updatedHistory);
-
-localStorage.setItem(
-  "predictionHistory",
-  JSON.stringify(updatedHistory)
-);
-```
 
 } catch (error) {
   console.error("FULL ERROR:", error);

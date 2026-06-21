@@ -4,9 +4,9 @@ An AI-powered healthcare prediction system that assesses the risk of diabetes us
 
 ## 🚀 Live Demo
 
-Frontend: [Add Your Vercel Link Here]
+Frontend: https://diabetes-risk-assessment-system.vercel.app/
 
-Backend API: [Add Your Render API Link Here]
+Backend API: https://diabetes-api-8tbz.onrender.com/
 
 ---
 
